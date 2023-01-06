@@ -3,21 +3,19 @@ kind: Deployment
 metadata:
   name: nginx-deployment
   labels:
-    app: web
+    app: nginx
 spec:
+  replicas: 3
   selector:
     matchLabels:
-      app: web
-  replicas: 2
-  strategy:
-    type: RollingUpdate
+      app: nginx
   template:
     metadata:
       labels:
-        app: web
+        app: nginx
     spec:
       containers:
-       —name: nginx
-          image: nginx
-          ports:
-           —containerPort: 80
+      - name: nginx
+        image: nginx:1.14.2
+        ports:
+        - containerPort: 80
