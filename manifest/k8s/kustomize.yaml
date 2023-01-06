@@ -4,8 +4,9 @@ metadata:
   name: test
   namespace: flux-system
 spec:
-  interval: 30s
-  path: ./manifest/k8s/secret
+  interval: 20s
+  targetNamespace: default
+  path: ./deploy
   prune: true
   sourceRef:
     kind: GitRepository
