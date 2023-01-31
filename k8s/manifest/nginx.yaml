@@ -5,7 +5,7 @@ kind: Deployment
 metadata:
 
   name: nginx-deployment
-  namespace: deafult
+  namespace: default
 
   labels:
 
